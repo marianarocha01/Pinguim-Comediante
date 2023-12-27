@@ -8,15 +8,11 @@ body {
     height: 100vh;
 }
 
-
-
 @media only screen and (max-width: 600px) {
     body {
-        font-size: 14px; 
+        font-size: 14px;
     }
 }
-
-
 
 .container {
     display: flex;
@@ -25,7 +21,6 @@ body {
     justify-content: center;
     text-align: center;
 }
-
 
 h1 {
     margin: 0;
@@ -47,13 +42,18 @@ h1 {
 
 #botao-piada {
     font-family: 'Roboto Slab', serif;
-    font-size: 0.8em;
+    font-size: 1em;
     background-color: #000000;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#botao-piada:hover {
+    background-color: #333333;
 }
 
 .bg_video {
@@ -62,10 +62,38 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     z-index: -100;
 }
 
+.balao {
+    display: inline-block;
+    padding: 12%;
+    background-color: white;
+    border: 2px;
+    left: 10%;
+    top: 5%;
+    margin-bottom: 10%;
+    position: relative;
+    max-width: 250px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.balao::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: 11%;
+    top: 11%;
+    background-color: white;
+    border: 2px;
+    border-color: transparent blue blue transparent;
+    transform: rotate(90deg);
+}
 .balao {
     display: inline-block;
     padding: 12%;
